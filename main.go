@@ -7,12 +7,12 @@ import (
 )
 
 func main() {
-	conn, err := tls.Dial("tcp", "freecodecamp.org:443", nil)
+	conn, err := tls.Dial("tcp", "tuxisma.github.io:443", nil)
 	if err != nil {
 		panic("Server does not support SSL certificate err: " + err.Error())
 	}
 
-	err = conn.VerifyHostname("freecodecamp.org")
+	err = conn.VerifyHostname("tuxisma.github.io")
 	if err != nil {
 		panic("Hostname does not match with certificate: " + err.Error())
 	}
